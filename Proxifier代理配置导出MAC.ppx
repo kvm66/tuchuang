@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxifierProfile version="101" platform="MacOSX" product_id="2" product_minver="200">
+    <Options>
+        <Resolve>
+            <AutoModeDetection enabled="true"/>
+            <ViaProxy enabled="false">
+                <TryLocalDnsFirst enabled="false"/>
+            </ViaProxy>
+            <ExclusionList ExcludeSimpleHostnames="true" ExcludeLocalhost="true" ExcludeSelfHostname="true" ExcludeLocalDomain="true">localhost;%SimpleHostnames%;%ComputerName%;*.local;
+</ExclusionList>
+        </Resolve>
+        <Encryption mode="disabled"/>
+        <HttpProxiesSupport enabled="false"/>
+        <HandleDirectConnections enabled="false"/>
+        <ConnectionLoopDetection enabled="true"/>
+        <ProcessServices enabled="false"/>
+        <ProcessOtherUsers enabled="false"/>
+    </Options>
+    <ProxyList>
+        <Proxy id="100" type="SOCKS5">
+            <Address>127.0.0.1</Address>
+            <Port>1088</Port>
+            <Options>0</Options>
+        </Proxy>
+    </ProxyList>
+    <ChainList/>
+    <RuleList>
+        <Rule enabled="true">
+            <Name>qv2ray [auto-created]</Name>
+            <Applications>qv2ray</Applications>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>SunloginClient_Desktop [auto-created]</Name>
+            <Applications>SunloginClient_Desktop</Applications>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>com.apple.geod [auto-created]</Name>
+            <Applications>com.apple.geod</Applications>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>"Cinema 4D" [auto-created]</Name>
+            <Applications>"Cinema 4D"</Applications>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>360Chrome [auto-created]</Name>
+            <Applications>360Chrome; </Applications>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>v2ray [auto-created]</Name>
+            <Applications>v2ray</Applications>
+            <Action type="Direct"/>
+        </Rule>
+        <Rule enabled="true">
+            <Name>分应用代理</Name>
+            <Applications>iTerm2; Autoupdate; BetterFontPicker; ColorPicker; CoreParse; NMSSH; SearchableComboListView; Sparkle; fileop; iTermServer; image_decoder; it2run; pidinfo; Terminal; com.apple.WebKit.Networking; nsurlsessiond; Transmission; Autoupdate; QuickLookPlugin; Sparkle; fileop; firefox; XUL; obfs4proxy; plugin-container; tor; studio; LLDBFrontend; appletviewer; clang-tidy; clangd; clhsdb; extcheck; fsnotifier; hsdb; idlj; jar; jarsigner; java; javac; javadoc; javah; javap; jcmd; jconsole; jdb; jdeps; jhat; jinfo; jjs; jmap; jps; jrunscript; jsadebugd; jspawnhelper; jstack; jstat; jstatd; keytool; llvm-symbolizer; minidump_stackwalk; native2ascii; orbd; pack200; policytool; restarter; rmic; rmid; rmiregistry; schemagen; serialver; servertool; simpleperf; tnameserv; unpack200; wsgen; wsimport; xjc; Brackets; "Brackets Helper"; "Brackets Helper EH"; "Brackets Helper NP"; Brackets-node; "Chromium Embedded Framework"; crash_inspector; crash_report_sender; Brackets; "Brackets Helper"; "Brackets Helper EH"; "Brackets Helper NP"; Brackets-node; "Chromium Embedded Framework"; crash_inspector; crash_report_sender; netbeans; ant; antRun; killall; mvn; mvnDebug; mvnyjp; nbexec; netbeans; privp; process_start; pty; pty_open; sigqueue; stat; KeeWeb; "Electron Framework"; "KeeWeb Helper"; "KeeWeb Helper (GPU)"; "KeeWeb Helper (Plugin)"; "KeeWeb Helper (Renderer)"; KeeWebHelper; Mantle; ReactiveCocoa; ShipIt; Squirrel; applet; chrome_crashpad_handler; "SpiderOak CrossClave"; "Electron Framework"; Mantle; ReactiveCocoa; ShipIt; "SpiderOak CrossClave Helper"; "SpiderOak CrossClave Helper (GPU)"; "SpiderOak CrossClave Helper (Plugin)"; "SpiderOak CrossClave Helper (Renderer)"; Squirrel; crashpad_handler; crossclave-backend; ; Terminal; com.apple.WebKit.Networking; nsurlsessiond; Playgrounds; CommonMark; CompilerExtension; DNTDocumentationModel; DNTDocumentationSupport; DNTSourceKitSupport; DNTTransformer; DVTMarkup; DocumentCheckerExtension; ExecutionExtension; LinkerExtension; PlaygroundBluetooth; PlaygroundBuild; PlaygroundCompiler; PlaygroundExecution; PlaygroundFoundation; PlaygroundKit; PlaygroundLinker; PlaygroundLogger; PlaygroundSupport; SPCLearningTrails; SourceEditor; SourceKitExtension; SourceKitSupport; _PlaygroundRuntime; llbuild; sourcekitd; tapi; com.apple.WebKit.Networking; nsurlsessiond; studio; LLDBFrontend; appletviewer; clang-tidy; clangd; clhsdb; extcheck; fsnotifier; hsdb; idlj; jar; jarsigner; java; javac; javadoc; javah; javap; jcmd; jconsole; jdb; jdeps; jhat; jinfo; jjs; jmap; jps; jrunscript; jsadebugd; jspawnhelper; jstack; jstat; jstatd; keytool; llvm-symbolizer; minidump_stackwalk; native2ascii; orbd; pack200; policytool; restarter; rmic; rmid; rmiregistry; schemagen; serialver; servertool; simpleperf; tnameserv; unpack200; wsgen; wsimport; xjc; Yummy; Autoupdate; Paddle; PkgInfo; Sparkle; ffmpeg; ffprobe; ydl</Applications>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>111</Name>
+            <Applications>Electron; "Code Helper"; "Code Helper (GPU)"; "Code Helper (Plugin)"; "Code Helper (Renderer)"; "Electron Framework"; Mantle; ReactiveCocoa; ShipIt; Squirrel; code; crashpad_handler; rg; tsc; tsserver</Applications>
+            <Action type="Proxy">100</Action>
+        </Rule>
+        <Rule enabled="true">
+            <Name>Default</Name>
+            <Action type="Proxy">100</Action>
+        </Rule>
+    </RuleList>
+</ProxifierProfile>
